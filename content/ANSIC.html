@@ -131,7 +131,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='About.html'>About</a><li><a href='w5.html'>w5</a><li><a href='w6.html'>w6</a><li><a href='w7.html'>w7</a><li><a href='w12.html'>w12</a><li><a href='w11.html'>w11</a><li><a href='w13.html'>w13</a><li><a href='ANSIC.html'>ANSIC</a><li><a href='Brython.html'>Brython</a></li>
+                     <li><a href='About.html'>About</a><li><a href='w5.html'>w5</a><li><a href='w6.html'>w6</a><li><a href='w7.html'>w7</a><li><a href='w11.html'>w11</a><li><a href='w12.html'>w12</a><li><a href='w13.html'>w13</a><li><a href='ANSIC.html'>ANSIC</a><li><a href='Brython.html'>Brython</a></li>
                       </ul>
                 </nav>
               </div>
@@ -143,26 +143,255 @@ img.add_border {
           
         </header>
     <div id="tipue_search_content">w13 << <a href='w13.html'>Previous</a> <a href='Brython.html'>Next</a> >> Brython<br /><h1>ANSIC</h1>
+<p><span> 1.</span></p>
 <pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
 
-int sum (int, int);//function declaration
-int main (void)
+int main()  
 {
-    int total;
-printf("\n\n Function : a simple structure of function :\n");
-printf("------------------------------------------------\n");	
-    total = sum (5, 6);//function call
-    printf ("The total is :  %d\n", total);
+    // Print Name
+    printf("Name   : Angel\n"); 
+
+    // Print Date of Birth
+    printf("DOB    : October 23, 2004\n"); 
+
+    // Print Mobile Number
+    printf("Mobile : 08-9999999999\n"); 
+
+    // Indicate successful execution
+    return(0); 
+}</pre>
+<p><video controls="controls" height="630" width="1008">
+<source src="./../images/1.mp4" type="video/mp4"/></video></p>
+<p>2.</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+int main(int argc, char** argv) {
+    // Check for C standard version
+    #if __STDC_VERSION__ &gt;=  201710L
+        printf("We are using C18!\n");
+    #elif __STDC_VERSION__ &gt;= 201112L
+        printf("We are using C11!\n");
+    #elif __STDC_VERSION__ &gt;= 199901L
+        printf("We are using C99!\n");
+    #else
+        printf("We are using C89/C90!\n");
+    #endif
+
+    // Indicate successful execution
+    return 0;
+}</pre>
+<p><video controls="controls" height="630" width="1008">
+<source src="./../images/2.mp4" type="video/mp4"/></video></p>
+<p>3.</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+int main() 
+{
+    // Print top line of pattern
+    printf("    ######\n");
+
+    // Print second line of pattern
+    printf("  ##      ##\n");
+
+    // Print lines 3 to 7 of pattern
+    printf(" #\n");
+    printf(" #\n");
+    printf(" #\n");
+    printf(" #\n");
+    printf(" #\n");
+
+    // Print bottom line of pattern
+    printf("  ##      ##\n");
+
+    // Print last line of pattern
+    printf("    ######\n");
+
+    return(0);
+}</pre>
+<p><video controls="controls" height="630" width="1008">
+<source src="./../images/3.mp4" type="video/mp4"/></video></p>
+<p>4.</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+int main() 
+{
+    // Declare and initialize character variables
+    char char1 = 'X';
+    char char2 = 'M';
+    char char3 = 'L';
+
+    // Print the original and reversed characters
+    printf("The reverse of %c%c%c is %c%c%c\n",
+        char1, char2, char3,
+        char3, char2, char1);
+
+    return(0);
+}</pre>
+<p><video controls="controls" height="630" width="1008">
+<source src="./../images/4.mp4" type="video/mp4"/></video></p>
+<p>5.</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt; 
+
+/* 
+   Variables to store the width and height of a rectangle in inches 
+*/
+int width;          
+int height;         
+
+int area;           /* Variable to store the area of the rectangle */
+int perimeter;      /* Variable to store the perimeter of the rectangle */
+
+int main() {
+    /* Assigning values to height and width */
+	height = 7;
+	width = 5;
+
+    /* Calculating the perimeter of the rectangle */
+    perimeter = 2*(height + width);
+	printf("Perimeter of the rectangle = %d inches\n", perimeter);
+	
+    /* Calculating the area of the rectangle */
+	area = height * width;
+	printf("Area of the rectangle = %d square inches\n", area);
+
+    return(0);
+}</pre>
+<p><video controls="controls" height="630" width="1008">
+<source src="./../images/5.mp4" type="video/mp4"/></video></p>
+<p>6.</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+int main() {
+   int radius;      /* Variable to store the radius of the circle */
+   float area, perimeter;    /* Variables to store the area and perimeter of the circle */ 
+   radius = 6;      /* Assigning a value to the radius */
+
+   /* Calculating the perimeter of the circle */
+   perimeter = 2 * 3.14 * radius;
+   printf("Perimeter of the Circle = %f inches\n", perimeter);
+
+   /* Calculating the area of the circle */
+   area = 3.14 * radius * radius;
+   printf("Area of the Circle = %f square inches\n", area);
+
+   return(0);
+}</pre>
+<p><video controls="controls" height="630" width="1008">
+<source src="./../images/6.mp4" type="video/mp4"/></video></p>
+<p>7.</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a = 125, b = 12345;        /* Declare and initialize integer variables */
+    long ax = 1234567890;          /* Declare and initialize long integer variable */
+    short s = 4043;                /* Declare and initialize short integer variable */
+    float x = 2.13459;             /* Declare and initialize floating-point variable */
+    double dx = 1.1415927;         /* Declare and initialize double precision variable */
+    char c = 'W';                  /* Declare and initialize character variable */
+    unsigned long ux = 2541567890; /* Declare and initialize unsigned long integer variable */
+
+    /* Various arithmetic operations and type conversions */
+    printf("a + c =  %d\n", a + c);
+    printf("x + c = %f\n", x + c);
+    printf("dx + x = %f\n", dx + x);
+    printf("((int) dx) + ax =  %ld\n", ((int) dx) + ax);
+    printf("a + x = %f\n", a + x);
+    printf("s + b =  %d\n", s + b);
+    printf("ax + b = %ld\n", ax + b);
+    printf("s + c =  %hd\n", s + c);
+    printf("ax + c = %ld\n", ax + c);
+    printf("ax + ux = %lu\n", ax + ux);
+
+    return 0;
+}</pre>
+<p><video controls="controls" height="630" width="1008">
+<source src="./../images/7.mp4" type="video/mp4"/></video></p>
+<p>8.</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+int main()
+{
+    int days, years, weeks;
+
+    days = 1329; // Total number of days
+
+    // Converts days to years, weeks and days
+    years = days/365; // Calculate years
+    weeks = (days % 365)/7; // Calculate weeks
+    days = days - ((years*365) + (weeks*7)); // Calculate remaining days
+
+    // Print the results
+    printf("Years: %d\n", years);
+    printf("Weeks: %d\n", weeks);
+    printf("Days: %d \n", days);
+
+    return 0;
+}</pre>
+<p><video controls="controls" height="630" width="1008">
+<source src="./../images/8.mp4" type="video/mp4"/></video></p>
+<p>9.</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+int main() {
+    int x, y;
+    int result1, result2; // 用于存储 scanf 的返回值
+
+    // 获取第一个整数
+    printf("Input the first integer: ");
+    result1 = scanf("%d", &amp;x);
+    if (result1 != 1) {
+        printf("Error: Please enter an integer.\n");
+        return 1;
+    }
+
+    // 获取第二个整数
+    printf("Input the second integer: ");
+    result2 = scanf("%d", &amp;y);
+    if (result2 != 1) {
+        printf("Error: Please enter an integer.\n");
+        return 1;
+    }
+
+    // 计算并输出它们的和
+    printf("Sum of the two integers = %d\n", x + y);
+
     return 0;
 }
+</pre>
+<p><video controls="controls" height="630" width="1008">
+<source src="./../images/9.mp4" type="video/mp4"/></video></p>
+<p>10.</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
 
-int sum (int a, int b) //function definition
-{
-  int s;
-s=a+b;
-    return s; //function returning a value
-}</pre>
-<p><span> </span></p>
+int main() {
+    int x, y;
+    int result_x, result_y; // 用於儲存 scanf 的返回值
+
+    // 獲取第一個整數
+    printf("輸入第一個整數：");
+    result_x = scanf("%d", &amp;x);
+    if (result_x != 1) {
+        printf("錯誤：請輸入整數。\n");
+        return 1;
+    }
+
+    // 獲取第二個整數
+    printf("輸入第二個整數：");
+    result_y = scanf("%d", &amp;y);
+    if (result_y != 1) {
+        printf("錯誤：請輸入整數。\n");
+        return 1;
+    }
+
+    // 計算並輸出它們的乘積
+    printf("這兩個整數的乘積 = %d\n", x * y);
+
+    return 0;
+}
+</pre>
+<p><video controls="controls" height="630" width="1008">
+<source src="./../images/10.mp4" type="video/mp4"/></video></p>
 <br />w13 << <a href='w13.html'>Previous</a> <a href='Brython.html'>Next</a> >> Brython</div>
         
     <!-- footer -->
