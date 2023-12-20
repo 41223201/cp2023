@@ -142,8 +142,166 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">w7 << <a href='w7.html'>Previous</a> <a href='w12.html'>Next</a> >> w12<br /><h1>w11</h1>
-<br />w7 << <a href='w7.html'>Previous</a> <a href='w12.html'>Next</a> >> w12</div>
+    <div id="tipue_search_content">w13 << <a href='w13.html'>Previous</a> <a href='ANSIC.html'>Next</a> >> ANSIC<br /><h1>C_ex</h1>
+<p>1.<span>寫一個 C 程序，接受兩個商品的重量和購買數量（浮點值）併計算它們的平均值</span></p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+int main() 
+{
+    double wi1, ci1, wi2, ci2, result; // 宣告變數表示重量和數量
+
+    // 提示使用者輸入 item 1 的重量
+    printf("Weight - Item1: ");
+    if (scanf("%lf", &amp;wi1) != 1) { // 讀取並檢查輸入值
+        printf("Error: Please enter a valid number.\n"); // 如果輸入無效，輸出錯誤訊息
+        return 1; // 返回非零值表示程式出錯
+    }
+    
+    // 提示使用者輸入 item 1 的數量
+    printf("No. of item1: ");
+    if (scanf("%lf", &amp;ci1) != 1) { // 讀取並檢查輸入值
+        printf("Error: Please enter a valid number.\n"); // 如果輸入無效，輸出錯誤訊息
+        return 1; // 返回非零值表示程式出錯
+    }
+    
+    // 提示使用者輸入 item 2 的重量
+    printf("Weight - Item2: ");
+    if (scanf("%lf", &amp;wi2) != 1) { // 讀取並檢查輸入值
+        printf("Error: Please enter a valid number.\n"); // 如果輸入無效，輸出錯誤訊息
+        return 1; // 返回非零值表示程式出錯
+    }
+    
+    // 提示使用者輸入 item 2 的數量
+    printf("No. of item2: ");
+    if (scanf("%lf", &amp;ci2) != 1) { // 讀取並檢查輸入值
+        printf("Error: Please enter a valid number.\n"); // 如果輸入無效，輸出錯誤訊息
+        return 1; // 返回非零值表示程式出錯
+    }
+    
+    // 計算平均值
+    result = ((wi1 * ci1) + (wi2 * ci2)) / (ci1 + ci2);
+    
+    // 輸出平均值
+    printf("Average Value = %f\n", result);
+    
+    return 0; // 返回零表示程式正常結束
+}
+</pre>
+<p><img alt="" height="142" src="./../images/11.png" width="400"/></p>
+<p>2.<span>寫一個 C 程序，接受員工的 ID、一個月的總工作時間、他每小時收到的金額</span></p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+int main() {
+    char id[10];         // 宣告變數表示員工ID（最多10個字元）
+    int hour;            // 宣告變數表示工作時數
+    double value, salary; // 宣告變數表示每小時薪水和總薪水
+
+    // 使用一個變數存儲 scanf 的返回值以避免警告
+    int result;
+
+    // 提示用戶輸入員工ID
+    printf("Input the Employees ID(Max. 10 chars): ");
+    result = scanf("%9s", id); // 讀取並檢查輸入的ID，限制最多讀取9個字元
+
+    if (result != 1) { // 檢查 scanf 的返回值
+        printf("Error: Please enter a valid Employee ID.\n");
+        return 1; // 返回1表示出錯
+    }
+
+    // ... 以下略，後續的程式碼保持不變 ...
+
+    return 0; // 返回0表示程式正常結束
+}
+</pre>
+<p><img alt="" height="24" src="./../images/12.png" width="400"/></p>
+<p>3.<span>寫一個 C 程序，接受三個整數並找出三個整數中的最大值</span></p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+int main()
+{
+    int x, y, z, result, max; // 宣告變數
+
+    // 提示用戶輸入第一個整數並存儲在 'x' 中
+    printf("\nInput the first integer: ");
+    if (scanf("%d", &amp;x) != 1) { // 檢查 scanf 的返回值
+        printf("Error: Please enter a valid integer.\n");
+        return 1; // 返回1表示出錯
+    }
+
+    // 提示用戶輸入第二個整數並存儲在 'y' 中
+    printf("\nInput the second integer: ");
+    if (scanf("%d", &amp;y) != 1) { // 檢查 scanf 的返回值
+        printf("Error: Please enter a valid integer.\n");
+        return 1; // 返回1表示出錯
+    }
+
+    // 提示用戶輸入第三個整數並存儲在 'z' 中
+    printf("\nInput the third integer: ");
+    if (scanf("%d", &amp;z) != 1) { // 檢查 scanf 的返回值
+        printf("Error: Please enter a valid integer.\n");
+        return 1; // 返回1表示出錯
+    }
+
+    // 計算結果
+    result = (x + y + abs(x - y)) / 2;
+
+    // 計算最大值
+    max = (result + z + abs(result - z)) / 2;
+
+    // 輸出最大值
+    printf("\nMaximum value of three integers: %d\n", max);
+
+    return 0; // 返回0表示程式正常結束
+}</pre>
+<p><img alt="" height="110" src="./../images/13.png" width="400"/></p>
+<p>4.<span>寫一個 C 程序，根據給定的總行駛距離（整數值）（以公里為單位）和用過的燃料（以公升為單位，浮點數 - 2 位小數）計算自行車的平均消耗量</span></p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+int main() 
+{
+    int x;    // 用來儲存總行駛公里數
+    float y;  // 用來儲存總耗油量
+
+    // 提示用戶輸入總行駛公里數並存儲在 'x' 中
+    printf("Input total distance in km: ");
+    if (scanf("%d", &amp;x) != 1) { // 檢查 scanf 的返回值
+        printf("Error: Please enter a valid integer.\n");
+        return 1; // 返回1表示出錯
+    }
+
+    // 提示用戶輸入總耗油量並存儲在 'y' 中
+    printf("Input total fuel spent in liters: ");
+    if (scanf("%f", &amp;y) != 1) { // 檢查 scanf 的返回值
+        printf("Error: Please enter a valid float number.\n");
+        return 1; // 返回1表示出錯
+    }
+
+    // 檢查總耗油量是否為0，以避免除以0的情況
+    if (y == 0) {
+        printf("Error: Total fuel spent cannot be zero.\n");
+        return 1; // 返回1表示出錯
+    }
+
+    // 計算並輸出平均油耗
+    printf("Average consumption (km/lt): %.3f\n", x / y);
+
+    return 0; // 返回0表示程式正常結束
+}
+</pre>
+<p><img alt="" height="73" src="./../images/14.png" width="400"/></p>
+<p>5.</p>
+<p></p>
+<p>6.</p>
+<p></p>
+<p>7.</p>
+<p></p>
+<p>8.</p>
+<p></p>
+<p>9.</p>
+<p></p>
+<p>10.</p>
+<p></p><br />w13 << <a href='w13.html'>Previous</a> <a href='ANSIC.html'>Next</a> >> ANSIC</div>
         
     <!-- footer -->
       <div class="container">
