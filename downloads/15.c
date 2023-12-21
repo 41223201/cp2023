@@ -1,41 +1,27 @@
 #include <stdio.h>
+
+double square(double num) {
+    return (num * num);
+}
+
 int main() {
-    int amt, total; // Declare variables for amount and total
+    int num;
+    double n;
+    int scanfResult; // 變數用於儲存 scanf 的返回值
 
-    // Prompt user for the amount and store it in 'amt'
-    printf("Input the amount: ");
-    scanf("%d",&amt);
+    printf("\n\n 函式：計算任意數字的平方值 :\n");
+    printf("------------------------------------------------\n");
 
-    // Calculate and print the number of each denomination
-    total = (int)amt/100;
-    printf("There are:\n");
-    printf("%d Note(s) of 100.00\n", total);
-    amt = amt-(total*100);
+    printf("輸入任意數字以計算平方值：");
+    scanfResult = scanf("%d", &num); // 將 scanf 的返回值儲存在變數中
 
-    total = (int)amt/50;
-    printf("%d Note(s) of 50.00\n", total);
-    amt = amt-(total*50);
+    if (scanfResult != 1) {
+        printf("輸入錯誤或無效的數字。\n");
+        return 1; // 適當的錯誤處理
+    }
 
-    total = (int)amt/20;
-    printf("%d Note(s) of 20.00\n", total);
-    amt = amt-(total*20);
-
-    total = (int)amt/10;
-    printf("%d Note(s) of 10.00\n", total);
-    amt = amt-(total*10);
-
-    total = (int)amt/5;
-    printf("%d Note(s) of 5.00\n", total);
-    amt = amt-(total*5);
-
-    total = (int)amt/2;
-    printf("%d Note(s) of 2.00\n", total);
-    amt = amt-(total*2);
-
-    total = (int)amt/1;
-    printf("%d Note(s) of 1.00\n", total);
+    n = square(num);
+    printf("%d 的平方是：%.2f\n", num, n);
 
     return 0;
 }
-
-(void)scanf("%d", &amt);
