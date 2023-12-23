@@ -1006,7 +1006,7 @@ int main() {
 <p><img alt="" height="200" src="/images/motion_plot.png" width="400"/></p>
 <p><video controls="controls" height="630" width="1008">
 <source src="/images/t.mp4" type="video/mp4"/></video></p>
-<h1>W15</h1>
+<h1>w15</h1>
 <p>1.<span>根據 </span><a href="https://nfuedu-my.sharepoint.com/:u:/g/personal/yen_nfu_edu_tw/EVcefUI2zPpAmP6lnLWLEAoBCBznMnvFpsNE-1VVFGvVZQ?e=goiPpP&amp;isSPOFile=1">roc_list_coord_flag.7z</a><span><span> </span>程式內容所印出的六組 ABED 等繪製 ROC 國旗白日圖案中的菱形四個關鍵點, 請直接在青天與滿地紅的圖案中, 利用白色作為畫線顏色, 將第二組的 ABED 等四個點的座標, 以直線相連.</span></p>
 <pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
 #include &lt;gd.h&gt;
@@ -1223,7 +1223,568 @@ void draw_roc_flag(gdImagePtr img) {
 <p><video controls="controls" height="630" width="1008">
 <source src="/images/W151.mp4" type="video/mp4"/></video></p>
 <h1>C_ex</h1>
-<h2>自選練習</h2>
+<h2>Exercises</h2>
+<p>1.</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+void main()
+{
+ /* 印出 Hello */
+printf("Hello World!");
+}</pre>
+<p><img alt="" height="49" src="/images/21.png" width="400"/></p>
+<p>2.Say Hello World! Bye Bye</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+int main()
+{
+/* 印出 Hello World! Bye Bye */
+printf("Hello World! ");
+printf("Bye ");
+printf("Bye");
+return 0;
+}</pre>
+<p><img alt="" height="30" src="/images/22.png" width="400"/></p>
+<p>3.變數宣告的例子</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+int main()
+{
+int a = 1;
+int A = 8;
+int b = 2, c;
+c = A - a + b;
+/* 輸出 a, A, b, c 到螢幕 */
+printf( "a = %d, A = %d, b = %d, c = %d ", a, A, b, c );
+return 0;
+}</pre>
+<p><img alt="" height="24" src="/images/23.png" width="400"/></p>
+<p>4.浮點運算的程式範例</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+void main()
+{
+float a = 0.5;
+double b = 1.2;
+int c = 3;
+b = b + a + c;
+/* 輸出 a, b, c 到螢幕 */
+printf( " a = %3.1f, b = %3.1f, c = %d ", a ,b, c );
+}
+</pre>
+<p><img alt="" height="23" src="/images/24.png" width="400"/></p>
+<p>5.字元範例 </p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+int main()
+{
+char x, y;
+x = 'a';
+y = (char)97;
+/* 輸出 x, y, x, 最後一個是以 ASCII 值顯示 y */
+printf( " x = %c, y = %c, ASCII of y = %d", x, y, y );
+return 0;
+}
+</pre>
+<p><img alt="" height="27" src="/images/25.png" width="400"/></p>
+<p>6.digital - 1</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+int main() {
+    int a = 64;
+    int b = 0x40;
+    long c = 64L;
+
+    printf("%d,%d,%ld", a, b, c);  // 使用 %ld 來打印 long 整數型別的變數 c
+
+    return 0;
+}</pre>
+<p><img alt="" height="24" src="/images/26.png" width="400"/></p>
+<p>7.輸入一個整數</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+int main()
+{
+int i;
+printf("Input an integer:");
+scanf( "%d", &amp;i ); /* ch 前面加個 &amp;(位址運算元) */
+printf( "the number is %d", i );
+return 0;
+}</pre>
+<p><img alt="" height="35" src="/images/27.png" width="400"/></p>
+<p>8.基本運算範例</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include&lt;stdio.h&gt;
+int main()
+{
+int a,b;
+a = 10; b = 3;
+printf( "%d \n", a * b );
+printf( "%d \n", a / b );
+printf( "%d \n", a + b );
+printf( "%d \n", a - b );
+printf( "%d \n", a % b );
+return 0;
+}</pre>
+<p><img alt="" height="62" src="/images/28.png" width="400"/></p>
+<p>9.關係運算元的範例</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+int main()
+{
+int a = 10, b = 5;
+printf( " a == b is %d \n", a == b );
+printf( " a &gt; b is %d \n", a &gt; b );
+printf( " a &lt; b is %d \n", a &lt; b );
+printf( " a &gt;= b is %d \n", a &gt;= b );
+printf( " a &lt;= b is %d \n", a &lt;= b );
+printf( " a != b is %d \n", a != b );
+printf( "\n" );
+b = 10;
+printf( " a == b is %d \n", a == b );
+printf( " a &gt; b is %d \n", a &gt; b );
+printf( " a &lt; b is %d \n", a &lt; b );
+printf( " a &gt;= b is %d \n", a &gt;= b );
+printf( " a &lt;= b is %d \n", a &lt;= b );
+printf( " a != b is %d \n", a != b );
+return 0;
+}</pre>
+<p><img alt="" height="143" src="/images/29.png" width="400"/></p>
+<p>10.位元運算元的範例</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include&lt;stdio.h&gt;
+void main()
+{
+int a,b;
+a = 15;
+b = 1;
+printf("%d \n", a | b ); /* a OR b */
+printf("%d \n", a &amp; b ); /* a AND b */
+printf("%d \n", a ^ b ); /* a XOR b */
+printf("%d \n", a &lt;&lt; 1 ); /* a 位元左移 1 位 */
+printf("%d \n", a &gt;&gt; 1 ); /* a 位元右移一位 */
+printf("%d \n", ~a ); /* A 的補數運算 */
+}
+</pre>
+<p><img alt="" height="71" src="/images/30.png" width="400"/></p>
+<h2>練習二</h2>
+<p>1.Logical NOT</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+void main()
+{
+int a;
+a = 3;
+printf("%d\n", !a );
+a = 0;
+printf("%d\n", !a );
+}</pre>
+<p><img alt="" height="30" src="/images/31.png" width="400"/></p>
+<p></p>
+<p>2.Logical AND</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+void main()
+{
+printf("%d\n", 1 &amp;&amp; 3 );
+printf("%d\n", 0 &amp;&amp; 0 );
+printf("%d\n", 2 &amp;&amp; 2 );
+}</pre>
+<p><img alt="" height="39" src="/images/32.png" width="400"/></p>
+<p></p>
+<p>3.Logical OR</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+void main()
+{
+printf("%d\n", 1 || 0 );
+printf("%d\n", 0 || 0 );
+printf("%d\n", 2 || 2 );
+}
+</pre>
+<p><img alt="" height="40" src="/images/33.png" width="400"/></p>
+<p></p>
+<p>4.sizeof 的範例</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+void main()
+{
+char a;
+printf( " The size of int is %d \n", sizeof(int) );
+printf( " The size of char a is %d \n", sizeof(a) );
+}
+</pre>
+<p><img alt="" height="166" src="/images/34.png" width="400"/></p>
+<p></p>
+<p>5.if 的範例</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+int main() {
+    char ch; 
+    printf("input a char: ");
+    scanf("%c", &amp;ch);
+    if (ch == 'a') {
+        printf("You pressed 'a'\n");
+    }
+    return 0;
+}</pre>
+<p><img alt="" height="78" src="/images/35.png" width="400"/></p>
+<p>若輸入的是 a, 則會印出一段 " You Pressed 'a'" 這一段文字.</p>
+<p></p>
+<p>6.if 與 else 的範例1</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+int main() {
+    char ch; 
+    printf("input a char: ");
+    scanf("%c", &amp;ch);
+    if (ch == 'a') {
+        printf("You pressed 'a'\n");
+    } else {
+        printf("You didn't press 'a'\n");
+    }
+    return 0;
+}</pre>
+<p><img alt="" height="85" src="/images/36.png" width="400"/></p>
+<p>輸入一個字元, 若是 'a' 則會印出 " You pressed 'a'", 否則會印出 " You didn't press 'a'".</p>
+<p>這裡輸入s，所以跳出<span> " You didn't press 'a'".</span></p>
+<p></p>
+<p>7. if 與 else 的範例2</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+int main() {
+    int i; 
+    printf("input an integer: ");
+    scanf("%d", &amp;i);
+
+    if (i &lt; 100) {
+        printf("i &lt; 100\n");
+    } else {
+        if ((i &gt;= 100) &amp;&amp; (i &lt; 200)) {
+            printf("i &gt;= 100 and i &lt; 200\n");
+        } else {
+            printf("i &gt;= 200\n");
+        }
+    }
+
+    return 0;
+}</pre>
+<p><img alt="" height="81" src="/images/37.png" width="400"/></p>
+<p>判斷輸入的數值是小於 100 或 大於等於 100 但小於 200 或是大於等 200.</p>
+<p>這裡輸入150，固介於100到200之間.</p>
+<p></p>
+<p>8.switch - case 的範例</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+int main() {
+    char c;
+    printf("Input a char: ");
+    scanf(" %c", &amp;c); // 加入一個空格在 %c 前，以排除之前的輸入緩衝區中的換行符號
+
+    switch(c) {
+        case 'a':
+            printf("You pressed 'a'\n");
+            break;
+        case 'b':
+            printf("You pressed 'b'\n");
+            break;
+        case 'c':
+            printf("You pressed 'c'\n");
+            break;
+        default:
+            printf("Not 'a', 'b', or 'c'\n");
+            break;
+    }
+
+    return 0;
+}
+</pre>
+<p><img alt="" height="180" src="/images/38.1.png" width="400"/></p>
+<p><img alt="" height="171" src="/images/38.2.png" width="400"/></p>
+<p>按了 'a' 會出現 "you pressed a".</p>
+<p>按了 'b' 會出現 "you pressed b".</p>
+<p>按了 'c' 會出現 "you pressed c".</p>
+<p>按其它鍵會出現 "not a, b, c "</p>
+<p></p>
+<p>9.switch - case 的範例</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+int main() {
+    char c;
+    printf("Input a char: ");
+    scanf(" %c", &amp;c);
+
+    switch(c) {
+        case 'a':
+            printf("You pressed 'a'\n");
+            break;
+        case 'b':
+            printf("You pressed 'b'\n");
+            break;
+        case 'c':
+            printf("You pressed 'c'\n");
+            break;
+        default:
+            printf("Not 'a', 'b', or 'c'\n");
+            break;
+    }
+
+    return 0;
+}
+</pre>
+<p><img alt="" height="68" src="/images/39.png" width="400"/></p>
+<p><span>根據輸入的字元進行適當的回應</span></p>
+<p></p>
+<p>10.Program 1 - for</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include&lt;stdio.h&gt;
+
+void main() {
+    int i;
+    for (i = 0; i &lt; 6; i++) {
+        printf("%d\n", i); /* 印出 i */
+    }
+}
+</pre>
+<p><img alt="" height="74" src="/images/40.png" width="400"/></p>
+<p><span>這段程式碼使用 for 迴圈從 0 開始迭代，當 i 達到 6 時，不再符合迴圈條件 i &lt; 6，迴圈將停止.</span></p><h1>ANSIC</h1>
+<h2>練習一</h2>
+<p>1.編寫一個 C 程式來列印您的姓名、出生日期和手機號碼</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+int main()  
+{
+    // Print Name
+    printf("Name   : Angel\n"); 
+
+    // Print Date of Birth
+    printf("DOB    : October 23, 2004\n"); 
+
+    // Print Mobile Number
+    printf("Mobile : 08-9999999999\n"); 
+
+    // Indicate successful execution
+    return(0); 
+}</pre>
+<p><video controls="controls" height="630" width="1008">
+<source src="/images/1.mp4" type="video/mp4"/></video></p>
+<p><br/>2.<span>編寫一個C 程式來取得您正在使用的C 版本</span></p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+int main(int argc, char** argv) {
+    // Check for C standard version
+    #if __STDC_VERSION__ &gt;=  201710L
+        printf("We are using C18!\n");
+    #elif __STDC_VERSION__ &gt;= 201112L
+        printf("We are using C11!\n");
+    #elif __STDC_VERSION__ &gt;= 199901L
+        printf("We are using C99!\n");
+    #else
+        printf("We are using C89/C90!\n");
+    #endif
+
+    // Indicate successful execution
+    return 0;
+}</pre>
+<p><video controls="controls" height="630" width="1008">
+<source src="/images/2.mp4" type="video/mp4"/></video></p>
+<p><br/>3.<span>寫一個 C 程序，使用哈希 (#) 列印一個區塊 F，其中 F 的高度為 6 個字符，寬度為 5 個和 4 個字符。</span><span>並且還列印一個非常大的“C”</span></p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+int main() 
+{
+    // Print top line of pattern
+    printf("    ######\n");
+
+    // Print second line of pattern
+    printf("  ##      ##\n");
+
+    // Print lines 3 to 7 of pattern
+    printf(" #\n");
+    printf(" #\n");
+    printf(" #\n");
+    printf(" #\n");
+    printf(" #\n");
+
+    // Print bottom line of pattern
+    printf("  ##      ##\n");
+
+    // Print last line of pattern
+    printf("    ######\n");
+
+    return(0);
+}</pre>
+<p><video controls="controls" height="630" width="1008">
+<source src="/images/3.mp4" type="video/mp4"/></video></p>
+<p><br/>4.<span>寫一個C 程序，反向列印下列字元</span></p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+int main() 
+{
+    // Declare and initialize character variables
+    char char1 = 'X';
+    char char2 = 'M';
+    char char3 = 'L';
+
+    // Print the original and reversed characters
+    printf("The reverse of %c%c%c is %c%c%c\n",
+        char1, char2, char3,
+        char3, char2, char1);
+
+    return(0);
+}</pre>
+<p><video controls="controls" height="630" width="1008">
+<source src="/images/4.mp4" type="video/mp4"/></video></p>
+<p><br/>5.<span>寫一個 C 程式來計算高 7 英吋、寬 5 英吋的矩形的周長和麵積</span></p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt; 
+
+/* 
+   Variables to store the width and height of a rectangle in inches 
+*/
+int width;          
+int height;         
+
+int area;           /* Variable to store the area of the rectangle */
+int perimeter;      /* Variable to store the perimeter of the rectangle */
+
+int main() {
+    /* Assigning values to height and width */
+	height = 7;
+	width = 5;
+
+    /* Calculating the perimeter of the rectangle */
+    perimeter = 2*(height + width);
+	printf("Perimeter of the rectangle = %d inches\n", perimeter);
+	
+    /* Calculating the area of the rectangle */
+	area = height * width;
+	printf("Area of the rectangle = %d square inches\n", area);
+
+    return(0);
+}</pre>
+<p><video controls="controls" height="630" width="1008">
+<source src="/images/5.mp4" type="video/mp4"/></video></p>
+<p><br/>6.<span>寫一個 C 程式來計算給定半徑的圓的周長和麵積</span></p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+int main() {
+   int radius;      /* Variable to store the radius of the circle */
+   float area, perimeter;    /* Variables to store the area and perimeter of the circle */ 
+   radius = 6;      /* Assigning a value to the radius */
+
+   /* Calculating the perimeter of the circle */
+   perimeter = 2 * 3.14 * radius;
+   printf("Perimeter of the Circle = %f inches\n", perimeter);
+
+   /* Calculating the area of the circle */
+   area = 3.14 * radius * radius;
+   printf("Area of the Circle = %f square inches\n", area);
+
+   return(0);
+}</pre>
+<p><video controls="controls" height="630" width="1008">
+<source src="/images/6.mp4" type="video/mp4"/></video></p>
+<p><br/>7.<span>寫一個C 程式來顯示多個變數</span></p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a = 125, b = 12345;        /* Declare and initialize integer variables */
+    long ax = 1234567890;          /* Declare and initialize long integer variable */
+    short s = 4043;                /* Declare and initialize short integer variable */
+    float x = 2.13459;             /* Declare and initialize floating-point variable */
+    double dx = 1.1415927;         /* Declare and initialize double precision variable */
+    char c = 'W';                  /* Declare and initialize character variable */
+    unsigned long ux = 2541567890; /* Declare and initialize unsigned long integer variable */
+
+    /* Various arithmetic operations and type conversions */
+    printf("a + c =  %d\n", a + c);
+    printf("x + c = %f\n", x + c);
+    printf("dx + x = %f\n", dx + x);
+    printf("((int) dx) + ax =  %ld\n", ((int) dx) + ax);
+    printf("a + x = %f\n", a + x);
+    printf("s + b =  %d\n", s + b);
+    printf("ax + b = %ld\n", ax + b);
+    printf("s + c =  %hd\n", s + c);
+    printf("ax + c = %ld\n", ax + c);
+    printf("ax + ux = %lu\n", ax + ux);
+
+    return 0;
+}</pre>
+<p><video controls="controls" height="630" width="1008">
+<source src="/images/7.mp4" type="video/mp4"/></video></p>
+<p><br/>8.<span>編寫一個 C 程序，將指定的日期轉換為年、週和日</span></p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+int main()
+{
+    int days, years, weeks;
+
+    days = 1329; // Total number of days
+
+    // Converts days to years, weeks and days
+    years = days/365; // Calculate years
+    weeks = (days % 365)/7; // Calculate weeks
+    days = days - ((years*365) + (weeks*7)); // Calculate remaining days
+
+    // Print the results
+    printf("Years: %d\n", years);
+    printf("Weeks: %d\n", weeks);
+    printf("Days: %d \n", days);
+
+    return 0;
+}</pre>
+<p><video controls="controls" height="630" width="1008">
+<source src="/images/8.mp4" type="video/mp4"/></video></p>
+<p><br/>9.<span>寫一個 C 程序，接受使用者提供的兩個整數併計算這兩個整數的和</span></p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+int main() {
+    int x, y;
+    int result1, result2; // 用于存储 scanf 的返回值
+
+    // 获取第一个整数
+    printf("Input the first integer: ");
+    result1 = scanf("%d", &amp;x);
+    if (result1 != 1) {
+        printf("Error: Please enter an integer.\n");
+        return 1;
+    }
+
+    // 获取第二个整数
+    printf("Input the second integer: ");
+    result2 = scanf("%d", &amp;y);
+    if (result2 != 1) {
+        printf("Error: Please enter an integer.\n");
+        return 1;
+    }
+
+    // 计算并输出它们的和
+    printf("Sum of the two integers = %d\n", x + y);
+
+    return 0;
+}
+</pre>
+<p><video controls="controls" height="630" width="1008">
+<source src="/images/9.mp4" type="video/mp4"/></video></p>
+<p><br/>10.<span>寫一個 C 程序，接受使用者提供的兩個整數併計算這兩個整數的乘積</span></p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+int main() {
+    int x, y;
+    int result_x, result_y; // 用於儲存 scanf 的返回值
+
+    // 獲取第一個整數
+    printf("輸入第一個整數：");
+    result_x = scanf("%d", &amp;x);
+    if (result_x != 1) {
+        printf("錯誤：請輸入整數。\n");
+        return 1;
+    }
+
+    // 獲取第二個整數
+    printf("輸入第二個整數：");
+    result_y = scanf("%d", &amp;y);
+    if (result_y != 1) {
+        printf("錯誤：請輸入整數。\n");
+        return 1;
+    }
+
+    // 計算並輸出它們的乘積
+    printf("這兩個整數的乘積 = %d\n", x * y);
+
+    return 0;
+}
+</pre>
+<p><video controls="controls" height="630" width="1008">
+<source src="/images/10.mp4" type="video/mp4"/></video></p>
+<h2>上課內容</h2>
 <p>1.<span>寫一個 C 程序，接受兩個商品的重量和購買數量（浮點值）併計算它們的平均值</span></p>
 <pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
 
@@ -1589,392 +2150,6 @@ int PrimeOrNot(int n1) {
 <p><img alt="" height="85" src="/images/20.png" width="400"/></p>
 <p><video controls="controls" height="630" width="1008">
 <source src="/images/20.mp4" type="video/mp4"/></video></p>
-<h2>電子書C程式範例</h2>
-<p>1.Say Hello World!</p>
-<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
-void main()
-{
- /* 印出 Hello */
-printf("Hello World!");
-}</pre>
-<p><img alt="" height="49" src="/images/21.png" width="400"/></p>
-<p>2.Say Hello World! Bye Bye</p>
-<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
-int main()
-{
-/* 印出 Hello World! Bye Bye */
-printf("Hello World! ");
-printf("Bye ");
-printf("Bye");
-return 0;
-}</pre>
-<p><img alt="" height="30" src="/images/22.png" width="400"/></p>
-<p>3.變數宣告的例子</p>
-<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
-int main()
-{
-int a = 1;
-int A = 8;
-int b = 2, c;
-c = A - a + b;
-/* 輸出 a, A, b, c 到螢幕 */
-printf( "a = %d, A = %d, b = %d, c = %d ", a, A, b, c );
-return 0;
-}</pre>
-<p><img alt="" height="24" src="/images/23.png" width="400"/></p>
-<p>4.浮點運算的程式範例</p>
-<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
-void main()
-{
-float a = 0.5;
-double b = 1.2;
-int c = 3;
-b = b + a + c;
-/* 輸出 a, b, c 到螢幕 */
-printf( " a = %3.1f, b = %3.1f, c = %d ", a ,b, c );
-}
-</pre>
-<p><img alt="" height="23" src="/images/24.png" width="400"/></p>
-<p>5.字元範例 </p>
-<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
-int main()
-{
-char x, y;
-x = 'a';
-y = (char)97;
-/* 輸出 x, y, x, 最後一個是以 ASCII 值顯示 y */
-printf( " x = %c, y = %c, ASCII of y = %d", x, y, y );
-return 0;
-}
-</pre>
-<p><img alt="" height="27" src="/images/25.png" width="400"/></p>
-<p>6.digital - 1</p>
-<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
-
-int main() {
-    int a = 64;
-    int b = 0x40;
-    long c = 64L;
-
-    printf("%d,%d,%ld", a, b, c);  // 使用 %ld 來打印 long 整數型別的變數 c
-
-    return 0;
-}</pre>
-<p><img alt="" height="24" src="/images/26.png" width="400"/></p>
-<p>7.輸入一個整數</p>
-<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
-int main()
-{
-int i;
-printf("Input an integer:");
-scanf( "%d", &amp;i ); /* ch 前面加個 &amp;(位址運算元) */
-printf( "the number is %d", i );
-return 0;
-}</pre>
-<p><img alt="" height="35" src="/images/27.png" width="400"/></p>
-<p>8.基本運算範例</p>
-<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include&lt;stdio.h&gt;
-int main()
-{
-int a,b;
-a = 10; b = 3;
-printf( "%d \n", a * b );
-printf( "%d \n", a / b );
-printf( "%d \n", a + b );
-printf( "%d \n", a - b );
-printf( "%d \n", a % b );
-return 0;
-}</pre>
-<p><img alt="" height="62" src="/images/28.png" width="400"/></p>
-<p>9.關係運算元的範例</p>
-<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
-int main()
-{
-int a = 10, b = 5;
-printf( " a == b is %d \n", a == b );
-printf( " a &gt; b is %d \n", a &gt; b );
-printf( " a &lt; b is %d \n", a &lt; b );
-printf( " a &gt;= b is %d \n", a &gt;= b );
-printf( " a &lt;= b is %d \n", a &lt;= b );
-printf( " a != b is %d \n", a != b );
-printf( "\n" );
-b = 10;
-printf( " a == b is %d \n", a == b );
-printf( " a &gt; b is %d \n", a &gt; b );
-printf( " a &lt; b is %d \n", a &lt; b );
-printf( " a &gt;= b is %d \n", a &gt;= b );
-printf( " a &lt;= b is %d \n", a &lt;= b );
-printf( " a != b is %d \n", a != b );
-return 0;
-}</pre>
-<p><img alt="" height="143" src="/images/29.png" width="400"/></p>
-<p>10.位元運算元的範例</p>
-<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include&lt;stdio.h&gt;
-void main()
-{
-int a,b;
-a = 15;
-b = 1;
-printf("%d \n", a | b ); /* a OR b */
-printf("%d \n", a &amp; b ); /* a AND b */
-printf("%d \n", a ^ b ); /* a XOR b */
-printf("%d \n", a &lt;&lt; 1 ); /* a 位元左移 1 位 */
-printf("%d \n", a &gt;&gt; 1 ); /* a 位元右移一位 */
-printf("%d \n", ~a ); /* A 的補數運算 */
-}
-</pre>
-<p><img alt="" height="71" src="/images/30.png" width="400"/></p><h1>ANSIC</h1>
-<h2>自選練習</h2>
-<p>1.編寫一個 C 程式來列印您的姓名、出生日期和手機號碼</p>
-<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
-
-int main()  
-{
-    // Print Name
-    printf("Name   : Angel\n"); 
-
-    // Print Date of Birth
-    printf("DOB    : October 23, 2004\n"); 
-
-    // Print Mobile Number
-    printf("Mobile : 08-9999999999\n"); 
-
-    // Indicate successful execution
-    return(0); 
-}</pre>
-<p><video controls="controls" height="630" width="1008">
-<source src="/images/1.mp4" type="video/mp4"/></video></p>
-<p><br/>2.<span>編寫一個C 程式來取得您正在使用的C 版本</span></p>
-<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
-
-int main(int argc, char** argv) {
-    // Check for C standard version
-    #if __STDC_VERSION__ &gt;=  201710L
-        printf("We are using C18!\n");
-    #elif __STDC_VERSION__ &gt;= 201112L
-        printf("We are using C11!\n");
-    #elif __STDC_VERSION__ &gt;= 199901L
-        printf("We are using C99!\n");
-    #else
-        printf("We are using C89/C90!\n");
-    #endif
-
-    // Indicate successful execution
-    return 0;
-}</pre>
-<p><video controls="controls" height="630" width="1008">
-<source src="/images/2.mp4" type="video/mp4"/></video></p>
-<p><br/>3.<span>寫一個 C 程序，使用哈希 (#) 列印一個區塊 F，其中 F 的高度為 6 個字符，寬度為 5 個和 4 個字符。</span><span>並且還列印一個非常大的“C”</span></p>
-<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
-
-int main() 
-{
-    // Print top line of pattern
-    printf("    ######\n");
-
-    // Print second line of pattern
-    printf("  ##      ##\n");
-
-    // Print lines 3 to 7 of pattern
-    printf(" #\n");
-    printf(" #\n");
-    printf(" #\n");
-    printf(" #\n");
-    printf(" #\n");
-
-    // Print bottom line of pattern
-    printf("  ##      ##\n");
-
-    // Print last line of pattern
-    printf("    ######\n");
-
-    return(0);
-}</pre>
-<p><video controls="controls" height="630" width="1008">
-<source src="/images/3.mp4" type="video/mp4"/></video></p>
-<p><br/>4.<span>寫一個C 程序，反向列印下列字元</span></p>
-<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
-
-int main() 
-{
-    // Declare and initialize character variables
-    char char1 = 'X';
-    char char2 = 'M';
-    char char3 = 'L';
-
-    // Print the original and reversed characters
-    printf("The reverse of %c%c%c is %c%c%c\n",
-        char1, char2, char3,
-        char3, char2, char1);
-
-    return(0);
-}</pre>
-<p><video controls="controls" height="630" width="1008">
-<source src="/images/4.mp4" type="video/mp4"/></video></p>
-<p><br/>5.<span>寫一個 C 程式來計算高 7 英吋、寬 5 英吋的矩形的周長和麵積</span></p>
-<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt; 
-
-/* 
-   Variables to store the width and height of a rectangle in inches 
-*/
-int width;          
-int height;         
-
-int area;           /* Variable to store the area of the rectangle */
-int perimeter;      /* Variable to store the perimeter of the rectangle */
-
-int main() {
-    /* Assigning values to height and width */
-	height = 7;
-	width = 5;
-
-    /* Calculating the perimeter of the rectangle */
-    perimeter = 2*(height + width);
-	printf("Perimeter of the rectangle = %d inches\n", perimeter);
-	
-    /* Calculating the area of the rectangle */
-	area = height * width;
-	printf("Area of the rectangle = %d square inches\n", area);
-
-    return(0);
-}</pre>
-<p><video controls="controls" height="630" width="1008">
-<source src="/images/5.mp4" type="video/mp4"/></video></p>
-<p><br/>6.<span>寫一個 C 程式來計算給定半徑的圓的周長和麵積</span></p>
-<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
-
-int main() {
-   int radius;      /* Variable to store the radius of the circle */
-   float area, perimeter;    /* Variables to store the area and perimeter of the circle */ 
-   radius = 6;      /* Assigning a value to the radius */
-
-   /* Calculating the perimeter of the circle */
-   perimeter = 2 * 3.14 * radius;
-   printf("Perimeter of the Circle = %f inches\n", perimeter);
-
-   /* Calculating the area of the circle */
-   area = 3.14 * radius * radius;
-   printf("Area of the Circle = %f square inches\n", area);
-
-   return(0);
-}</pre>
-<p><video controls="controls" height="630" width="1008">
-<source src="/images/6.mp4" type="video/mp4"/></video></p>
-<p><br/>7.<span>寫一個C 程式來顯示多個變數</span></p>
-<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
-
-int main()
-{
-    int a = 125, b = 12345;        /* Declare and initialize integer variables */
-    long ax = 1234567890;          /* Declare and initialize long integer variable */
-    short s = 4043;                /* Declare and initialize short integer variable */
-    float x = 2.13459;             /* Declare and initialize floating-point variable */
-    double dx = 1.1415927;         /* Declare and initialize double precision variable */
-    char c = 'W';                  /* Declare and initialize character variable */
-    unsigned long ux = 2541567890; /* Declare and initialize unsigned long integer variable */
-
-    /* Various arithmetic operations and type conversions */
-    printf("a + c =  %d\n", a + c);
-    printf("x + c = %f\n", x + c);
-    printf("dx + x = %f\n", dx + x);
-    printf("((int) dx) + ax =  %ld\n", ((int) dx) + ax);
-    printf("a + x = %f\n", a + x);
-    printf("s + b =  %d\n", s + b);
-    printf("ax + b = %ld\n", ax + b);
-    printf("s + c =  %hd\n", s + c);
-    printf("ax + c = %ld\n", ax + c);
-    printf("ax + ux = %lu\n", ax + ux);
-
-    return 0;
-}</pre>
-<p><video controls="controls" height="630" width="1008">
-<source src="/images/7.mp4" type="video/mp4"/></video></p>
-<p><br/>8.<span>編寫一個 C 程序，將指定的日期轉換為年、週和日</span></p>
-<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
-
-int main()
-{
-    int days, years, weeks;
-
-    days = 1329; // Total number of days
-
-    // Converts days to years, weeks and days
-    years = days/365; // Calculate years
-    weeks = (days % 365)/7; // Calculate weeks
-    days = days - ((years*365) + (weeks*7)); // Calculate remaining days
-
-    // Print the results
-    printf("Years: %d\n", years);
-    printf("Weeks: %d\n", weeks);
-    printf("Days: %d \n", days);
-
-    return 0;
-}</pre>
-<p><video controls="controls" height="630" width="1008">
-<source src="/images/8.mp4" type="video/mp4"/></video></p>
-<p><br/>9.<span>寫一個 C 程序，接受使用者提供的兩個整數併計算這兩個整數的和</span></p>
-<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
-
-int main() {
-    int x, y;
-    int result1, result2; // 用于存储 scanf 的返回值
-
-    // 获取第一个整数
-    printf("Input the first integer: ");
-    result1 = scanf("%d", &amp;x);
-    if (result1 != 1) {
-        printf("Error: Please enter an integer.\n");
-        return 1;
-    }
-
-    // 获取第二个整数
-    printf("Input the second integer: ");
-    result2 = scanf("%d", &amp;y);
-    if (result2 != 1) {
-        printf("Error: Please enter an integer.\n");
-        return 1;
-    }
-
-    // 计算并输出它们的和
-    printf("Sum of the two integers = %d\n", x + y);
-
-    return 0;
-}
-</pre>
-<p><video controls="controls" height="630" width="1008">
-<source src="/images/9.mp4" type="video/mp4"/></video></p>
-<p><br/>10.<span>寫一個 C 程序，接受使用者提供的兩個整數併計算這兩個整數的乘積</span></p>
-<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
-
-int main() {
-    int x, y;
-    int result_x, result_y; // 用於儲存 scanf 的返回值
-
-    // 獲取第一個整數
-    printf("輸入第一個整數：");
-    result_x = scanf("%d", &amp;x);
-    if (result_x != 1) {
-        printf("錯誤：請輸入整數。\n");
-        return 1;
-    }
-
-    // 獲取第二個整數
-    printf("輸入第二個整數：");
-    result_y = scanf("%d", &amp;y);
-    if (result_y != 1) {
-        printf("錯誤：請輸入整數。\n");
-        return 1;
-    }
-
-    // 計算並輸出它們的乘積
-    printf("這兩個整數的乘積 = %d\n", x * y);
-
-    return 0;
-}
-</pre>
-<p><video controls="controls" height="630" width="1008">
-<source src="/images/10.mp4" type="video/mp4"/></video></p>
-<h2>電子書C程式範例</h2>
 <h1>Brython</h1>
 <p><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">https://en.wikipedia.org/wiki/Python_(programming_language)</a></p>
 <h4>Examples:</h4>
