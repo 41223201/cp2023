@@ -1873,7 +1873,359 @@ void main() {
 </pre>
 <p><img alt="" height="74" src="/images/40.png" width="400"/></p>
 <p><span>這段程式碼使用 for 迴圈從 0 開始迭代，當 i 達到 6 時，不再符合迴圈條件 i &lt; 6，迴圈將停止.</span></p>
-<h1>ANSIC</h1>
+<p><span></span></p>
+<p><span>在可攜程式環境中以 SciTE + Tiny C Compiler 編譯系統, 使用 Tools - Go 類編譯方式執行做<a href="https://link.springer.com/content/pdf/10.1007/978-1-4842-5064-8_1.pdf?pdf=inline%20link">Introduction to C</a><span>.</span></span></p>
+<p><span><span>1.</span></span></p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+/* 示例：使用 if 條件判斷 */
+int main() {
+    int this_is_a_number;
+
+    printf("請輸入介於1到10之間的整數：\n ");
+    scanf("%d", &amp;this_is_a_number);
+
+    if (this_is_a_number &lt; 6) {
+        printf("這個數字小於6；\n ");
+    } else {
+        printf("這個數字大於等於6；\n ");
+    }
+
+    printf("請輸入介於10到20之間的整數：\n ");
+    scanf("%d", &amp;this_is_a_number);
+
+    if (this_is_a_number &lt; 16) {
+        printf("這個數字小於16；\n ");
+    } else {
+        printf("這個數字大於等於16；\n ");
+    }
+
+    return 0;
+}
+</pre>
+<p><img alt="" height="393" src="/images/51.png" width="450"/></p>
+<p>2.</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#define _CRT_SECURE_NO_WARNINGS
+#include &lt;stdio.h&gt;
+
+/* 範例展示 if then else if 運算 */
+int main() {
+    int this_is_a_number;
+
+    printf("請輸入介於1和10之間的整數：\n");
+    scanf("%d", &amp;this_is_a_number);
+
+    if (this_is_a_number &lt; 6) {
+        printf("這個數字小於6;\n");
+    }
+
+    printf("請輸入介於10和20之間的整數：\n");
+    scanf("%d", &amp;this_is_a_number);
+
+    if (this_is_a_number &lt; 16) {
+        printf("這個數字小於16\n");
+    } else if (this_is_a_number == 20) {
+        printf("這個數字是20\n");
+    } else {
+        printf("這個數字大於15\n");
+    }
+
+    return 0;
+}
+</pre>
+<p><img alt="" height="392" src="/images/52.png" width="450"/></p>
+<p>3.</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#define _CRT_SECURE_NO_WARNINGS
+#include &lt;stdio.h&gt;
+
+/* 程式示範陣列的使用 */
+int main()
+{
+    int arr1[8]; /* 定義一個包含8個整數的陣列 */
+    int i;
+
+    printf("請輸入8個整數\n");
+    for (i = 0; i &lt; 8; i++)
+    {
+        scanf("%d", &amp;arr1[i]); /* 讀取到 arr1[i] */
+    }
+
+    printf("您的8個數字為\n");
+    for (i = 0; i &lt; 8; i++)
+    {
+        printf("%d ", arr1[i]);
+    }
+    printf("\n");
+    return 0;
+}
+</pre>
+<p><img alt="" height="392" src="/images/53.png" width="450"/></p>
+<p>4.</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#define _CRT_SECURE_NO_WARNINGS
+#include &lt;stdio.h&gt;
+
+/* 程式示範字元陣列的使用 */
+int main()
+{
+    char arr2[10]; /* 定義一個包含10個字符的陣列 */
+    int i;
+
+    printf("請輸入10個字元\n");
+    for (i = 0; i &lt; 10; i++)
+    {
+        scanf(" %c", &amp;arr2[i]); /* 讀取到 arr2[i] */
+    }
+
+    printf("您的10個字元為\n");
+    for (i = 0; i &lt; 10; i++)
+    {
+        printf("%c ", arr2[i]);
+    }
+    printf("\n");
+    return 0;
+}
+</pre>
+<p><img alt="" height="392" src="/images/54.png" width="450"/></p>
+<p>5.</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#define _CRT_SECURE_NO_WARNINGS
+#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+
+/* Illustration of the common trigonometric functions */
+int main() {
+    #define PI 3.14159265
+    double angle, radianno, answer;
+
+    /* 計算餘弦函數 */
+    printf("餘弦函數：\n");
+    printf("請輸入角度值：\n");
+    scanf("%lf", &amp;angle);
+    printf("您輸入了 %lf\n", angle);
+    radianno = angle * (2 * PI / 360);
+    answer = cos(radianno);
+    printf("%lf 角度的餘弦值是 %lf\n", angle, answer);
+
+    /* 計算正弦函數 */
+    printf("正弦函數：\n");
+    printf("請輸入角度值：\n");
+    scanf("%lf", &amp;angle);
+    printf("您輸入了 %lf\n", angle);
+    radianno = angle * (2 * PI / 360);
+    answer = sin(radianno);
+    printf("%lf 角度的正弦值是 %lf\n", angle, answer);
+
+    /* 計算正切函數 */
+    printf("正切函數：\n");
+    printf("請輸入角度值：\n");
+    scanf("%lf", &amp;angle);
+    printf("您輸入了 %lf\n", angle);
+    radianno = angle * (2 * PI / 360);
+    answer = tan(radianno);
+    printf("%lf 角度的正切值是 %lf\n", angle, answer);
+
+    return 0;
+}
+</pre>
+<p><img alt="" height="392" src="/images/55.png" width="450"/></p>
+<p>6.</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#define _CRT_SECURE_NO_WARNINGS
+#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+
+int main() {
+    #define PI 3.14159265
+    double radianno, answer, arccos, arcsin, arctan;
+
+    /* 反餘弦函數 */
+    printf("反餘弦函數：\n");
+    printf("請輸入反餘弦值：\n");
+    scanf("%lf", &amp;arccos);
+    printf("您輸入了 %lf\n", arccos);
+    radianno = acos(arccos);
+    answer = radianno * (360 / (2 * PI));
+    printf("%lf 的反餘弦值為 %lf 度\n", arccos, answer);
+
+    /* 反正弦函數 */
+    printf("反正弦函數：\n");
+    printf("請輸入反正弦值：\n");
+    scanf("%lf", &amp;arcsin);
+    printf("您輸入了 %lf\n", arcsin);
+    radianno = asin(arcsin);
+    answer = radianno * (360 / (2 * PI));
+    printf("%lf 的反正弦值為 %lf 度\n", arcsin, answer);
+
+    /* 反正切函數 */
+    printf("反正切函數：\n");
+    printf("請輸入反正切值：\n");
+    scanf("%lf", &amp;arctan);
+    printf("您輸入了 %lf\n", arctan);
+    radianno = atan(arctan);
+    answer = radianno * (360 / (2 * PI));
+    printf("%lf 的反正切值為 %lf 度\n", arctan, answer);
+
+    return 0;
+}
+</pre>
+<p><img alt="" height="392" src="/images/56.png" width="450"/></p>
+<p>7.</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#define _CRT_SECURE_NO_WARNINGS
+#include &lt;stdio.h&gt;
+
+/* 此程式碼展示了一個函式的作用 */
+/* 這個函式比較兩個數字的大小 */
+/* 使用者輸入三個數字，並獲得它們之間的大小關係！ */
+
+void myfunction(int a, int b); /* 函式的宣告及其參數 */
+int first, second, third;
+
+int main() {
+    printf("請輸入第一個整數：");
+    scanf("%d", &amp;first);
+
+    printf("請輸入第二個整數：");
+    scanf("%d", &amp;second);
+
+    printf("請輸入第三個整數：");
+    scanf("%d", &amp;third);
+
+    myfunction(first, second);
+    myfunction(first, third);
+    myfunction(second, third);
+
+    return 0;
+}
+
+void myfunction(int a, int b) {
+    /* 此函式位於程式主體 main{} 之外 */
+    /* 此函式僅比較兩個參數 a 和 b 的大小，並告訴使用者結果 */
+    if (a &gt; b)
+        printf("%d 大於 %d\n", a, b);
+    else if (a &lt; b)
+        printf("%d 大於 %d\n", b, a);
+    else
+        printf("%d 與 %d 相等\n", a, b);
+}
+</pre>
+<p><img alt="" height="392" src="/images/57.png" width="450"/></p>
+<p>8.</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#define _CRT_SECURE_NO_WARNINGS
+#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+
+/* 示範 exp、log 和 log10 函數的使用 */
+
+int main() {
+    double answer, expno, natlog, lb10;
+
+    /* 計算輸入數字的指數 */
+    printf("指數函數：\n");
+    printf("請輸入一個數字：\n");
+    scanf("%lf", &amp;expno);
+    printf("您輸入了 %lf\n", expno);
+    answer = exp(expno);
+    printf("%lf 的指數是 %lf\n", expno, answer);
+
+    /* 計算輸入數字的自然對數 */
+    printf("自然對數函數：\n");
+    printf("請輸入一個數字：\n");
+    scanf("%lf", &amp;natlog);
+    printf("您輸入了 %lf\n", natlog);
+    answer = log(natlog);
+    printf("%lf 的自然對數是 %lf\n", natlog, answer);
+
+    /* 計算輸入數字的以 10 為底的對數 */
+    printf("以 10 為底的對數函數：\n");
+    printf("請輸入一個數字：\n");
+    scanf("%lf", &amp;lb10);
+    printf("您輸入了 %lf\n", lb10);
+    answer = log10(lb10);
+    printf("%lf 的以 10 為底的對數是 %lf\n", lb10, answer);
+
+    return 0;
+}
+</pre>
+<p><img alt="" height="393" src="/images/58.png" width="450"/></p>
+<p>9.</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+/* 函數用於找出學生成績中的最高分 */
+double getmarks(double pupils[]);
+
+int main() {
+    double pupil;
+
+    /* 一個班級的成績陣列預先設定在主程式中 */
+    double marks[] = { 10.6, 23.7, 67.9, 93.0, 64.2, 33.8 ,57.5 ,82.2 ,50.7 ,45.7 };
+
+    /* 調用 getmarks 函數。該函數將返回最高分，然後將其存儲在 pupil 中 */
+    pupil = getmarks(marks);
+
+    printf("最高分是 = %f", pupil);
+    return 0;
+}
+
+/* 函數定義：找出最高分 */
+double getmarks(double pupils[]) {
+    int i;
+    double highest;
+    highest = 0;
+
+    /* 逐個檢查所有學生的成績並存儲最高分 */
+    for (i = 0; i &lt; 10; ++i) {
+        if (highest &lt; pupils[i])
+            highest = pupils[i];
+    }
+
+    return highest; /* 將最高分返回到函數被調用的地方 */
+}
+</pre>
+<p><img alt="" height="393" src="/images/59.png" width="450"/></p>
+<p>10.</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#define _CRT_SECURE_NO_WARNINGS
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+/* 程式示範字串操作：strlen、strcpy、strcat、strcmp */
+int main() {
+    char borrow[7] = { 'b', 'o', 'r', 'r', 'o', 'w','\0' };
+    char string1[32] = "This is string1";
+    char string2[16] = "This is string2";
+    char string3[16];
+    int len;
+
+    /* 顯示字串的長度 */
+    len = strlen(string1);
+    printf("strlen(string1) : %d\n", len);
+    len = strlen(string2);
+    printf("strlen(string2) : %d\n", len);
+    len = strlen(string3);
+    printf("strlen(string3) : %d\n", len);
+
+    /* 將 string1 複製到 string3 */
+    strcpy(string3, string1);
+    printf("strcpy( string3, string1) : %s\n", string3);
+    len = strlen(string3);
+    printf("strlen(string3) after copy of string1 into string3 : %d\n", len);
+
+    /* 比較 string1 和 string3（這兩者應該相同）*/
+    if (strcmp(string1, string3) == 0)
+        printf("strings are the same\n");
+
+    /* 將 string1 和 string2 串聯起來 */
+    strcat(string1, string2);
+    printf("strcat( string1, string2): %s\n", string1);
+
+    /* 串聯後的 string1 的總長度 */
+    len = strlen(string1);
+    printf("strlen(string1) after cat of string2 onto string1 : %d\n", len);
+
+    /* 顯示預定義的引號字元串 */
+    printf("String as predefined quoted chars: %s\n", borrow);
+
+    return 0;
+}
+</pre>
+<p><img alt="" height="393" src="/images/60.png" width="450"/></p><h1>ANSIC</h1>
 <h2>練習一</h2>
 <p>1.編寫一個 C 程式來列印您的姓名、出生日期和手機號碼</p>
 <pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
